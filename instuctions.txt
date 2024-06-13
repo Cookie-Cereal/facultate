@@ -1,0 +1,44 @@
+<!-- HTML -->
+<div class="ball"></div>
+
+<!-- CSS -->
+.ball {
+  /* Change the color of the ball by editing this value */
+  background-color: #00f; /* blue */
+  
+  /* Change the shape of the ball by editing this value */
+  border-radius: 50%; /* circle */
+  
+  /* Change the size of the ball by editing these values */
+  width: 50px;
+  height: 50px;
+  
+  /* Make the ball move diagonally across the screen */
+  position: absolute;
+  top: 50vh;
+  left: 0;
+  animation: move 3s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    /* Change the starting position of the ball by editing these values */
+    top: 50vh;
+    left: 0;
+  }
+  100% {
+    /* Change the ending position of the ball by editing these values */
+    top: 0;
+    left: 100vw;
+  }
+}
+
+Here's what you can edit to change the values:
+
+Color: Edit the background-color value in the .ball class to change the color of the ball.
+Shape: Edit the border-radius value in the .ball class to change the shape of the ball. For example, border-radius: 0 would make the ball a rectangle.
+Size: Edit the width and height values in the .ball class to change the size of the ball.
+Direction: Edit the top and left values in the @keyframes rule to change the direction of the ball. For example, to make the ball move from bottom-right to top-left, you would swap the values: top: 0; left: 100vw; at 0% and top: 100vh; left: 0; at 100%.
+Speed: Edit the animation-duration value in the .ball class to change the speed of the ball. For example, animation-duration: 5s would make the ball move slower.
+Animation timing function: Edit the animation-timing-function value in the .ball class to change the timing function of the animation. For example, animation-timing-function: ease-in-out would make the ball accelerate and decelerate smoothly.
+Note that you can also add more keyframes to the @keyframes rule to make the ball move in a more complex path. For example, you could add a keyframe at 50% to make the ball change direction mid-way through the animation.
