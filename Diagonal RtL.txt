@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.circle {
+			width: 50px;
+			height: 50px;
+			background-color: #f00;
+			border-radius: 50%;
+			position: absolute;
+			top: 0;
+			right: 0; /* changed from left: 0 */
+			animation: move 3s linear infinite;
+		}
+		
+		@keyframes move {
+			0% {
+				top: 0;
+				right: 0; /* changed from left: 0 */
+			}
+			100% {
+				top: 100vh; /* move down the full height of the viewport */
+				left: 0; /* changed from right: 100vw */
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="circle"></div>
+</body>
+</html>
