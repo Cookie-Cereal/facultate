@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animație Traiectorie</title>
+    <style>
+        svg {
+            width: 100vw;
+            height: 100vh;
+            background-color: white;
+        }
+        #circle {
+            fill: yellow;
+            stroke: green;
+            stroke-width: 3;
+        }
+        #path {
+            fill: none;
+            stroke: black;
+            stroke-width: 2;
+        }
+        #pauseButton {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="pauseButton">Pauză</button>
+    <svg viewBox="0 0 200 200">
+        <path id="path" d="M 50,150 Q 100,50 150,150" />
+        <circle id="circle" cx="50" cy="150" r="10" />
+    </svg>
+
+    <script>
+        const circle = document.getElementById('circle');
+        const path = document.getElementById('path');
+        const pauseButton = document.getElementById('pauseButton');
+
+        let length = path.getTotalLength();
+        let startTime = null;
+        let paused = false;
+        let pauseTime = null;
+        let duration = 4000;
+
+        function animateCircle(time) {
+            if (!startTime) startTime = time;
+            if (paused) {
+                if (pauseTime === null) pauseTime = time;
+                startTime += (time - pauseTime);
+                pauseTime = time;
+            } else {
+                pauseTime = null;
+            }
+
+            let elapsed = time - startTime;
+            let progress = elapsed / duration;
+            if (progress > 1) progress = 1;
+
+            let point = path.getPointAtLength(progress * length);
+            circle.setAttribute("cx", point.x);
+            circle.setAttribute("cy", point.y);
+
+            if (progress < 1) {
+                requestAnimationFrame(animateCircle);
+            } else {
+                startTime = null;
+                requestAnimationFrame(animateCircle);
+            }
+        }
+
+        pauseButton.addEventListener('click', () => {
+            paused = !paused;
+            pauseButton.textContent = paused ? "Pornire" : "Pauză";
+        });
+
+        requestAnimationFrame(animateCircle);
+    </script>
+</body>
+</html>
