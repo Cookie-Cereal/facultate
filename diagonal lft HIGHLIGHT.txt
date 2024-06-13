@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Moving Circle</title>
+	<style>
+		#circle {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: yellow;
+			border: 2px solid green;
+		}
+	</style>
+</head>
+<body>
+	<div id="circle"></div>
+	
+	<script>
+		let circle = document.getElementById('circle');
+		let x = 0;
+		let y = 0;
+		let speedX = 2;
+		let speedY = 2;
+		
+		function moveCircle() {
+			x += speedX;
+			y += speedY;
+			
+			if (x + 50 > window.innerWidth || x < 0) {
+				speedX = -speedX;
+			}
+			if (y + 50 > window.innerHeight || y < 0) {
+				speedY = -speedY;
+			}
+			
+			circle.style.top = y + 'px';
+			circle.style.left = x + 'px';
+		}
+		
+		setInterval(moveCircle, 16); // 16ms = 60fps
+	</script>
+</body>
+</html>
