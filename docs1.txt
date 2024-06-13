@@ -1,0 +1,61 @@
+Cu ajutorul HTML5 este posibila utilizarea de continut din 
+cadrul altui domeniu web intr-un element de tip <iframe> sau <div>:
+d. da
+
+In cazul utilizarii comenzilor HTML5 <video> si <audio> este 
+obligatorie instalarea unor plugin-uri de tip Flash sau QuickTime?
+a. Nu
+
+Care dintre comenzile de mai jos sunt nou introduse in cadrul HTML5?
+a. <article>, <keygen>, <progress>
+
+Care dintre comenzile de mai jos sunt excluse odata cu introducerea specificatiilor HTML5?
+d. <acronym>, <noframe>, <strike>
+
+Care dintre urmatoarele tipuri de filament sunt cel mai 
+des regasite in cazul imprimarii de obiecte 3D in regim SOHO?
+b. PLA
+
+Care dintre functiile de mai jos deseneaza un dreptunghi 
+cu suprafata acoperita cu o anumita culoare aleasa anterior:
+a. fillRect (a, b, c, d)
+
+La ce se refera ultima valoare din cadrul apelului functiei rgba(a, b, c, d)?
+d. La gradul de transparenta al culorii create prin functie
+
+Care dintre comenzile de mai jos poate fi folosita 
+in HTML5 pentru a publica un text in fereastra browser-ului?
+d. strokeText
+
+Care dintre seriile de elementele de formular urmatoare este introdusa odata cu HTML5?
+a. datetime, range, month
+
+Care dintre comenzile de mai jos da posibilitatea de 
+a afla cate intrari diferite exista intr-o anumita sesiune de navigare cu un browser?
+c. windows.history.length
+
+Atributul designmode, cu valoarea “on”, realizeaza urmatorul lucru:
+a. Face intregul document editabil
+
+Ce efect vizual are utilizarea elementului de formular „datetime”?
+d. Aparitia unei machete vizuale a unui calendar
+
+Care dintre atributele de mai jos sunt obligatoriu necesare comenzii <canvas>:
+a. width, height
+
+Care dintre elementele de formular de mai jos creaza o paleta 
+de culori din care utilizatorul poate selecta o anumita culoare:
+c. Color
+
+Care dintre urmatoarele comenzi da posibilitatea realizarii transformarii unui element grafic din HTML5:
+c. scale
+
+In ce limbaj este transmis obiectul 3D catre imprimanta?
+c. G-Code
+
+Care dintre titlurile software urmatoare este cel mai indicat pentru incepatori in modelarea 3D?
+b. TinkerCad
+
+Care dintre urmatoarele tipuri de filament sunt cel 
+mai des regasite in cazul imprimarii de obiecte 3D in regim SOHO?
+b. PLA
